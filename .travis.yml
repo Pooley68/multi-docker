@@ -11,14 +11,14 @@ services:
 #  - docker run -e CI=true pooley68/react-test npm test
 
 after_success:
-  - docker build -t pooley68/multi-client ./client
-  - docker build -t pooley68/multi-nginx ./nginx
-  - docker build -t pooley68/multi-server ./server
-  - docker build -t pooley68/multi-worker ./worker
+  - docker build -t pooley1968/multi-client ./client
+  - docker build -t pooley1968/multi-nginx ./nginx
+  - docker build -t pooley1968/multi-server ./server
+  - docker build -t pooley1968/multi-worker ./worker
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
-  - docker push pooley68/multi-client
-  - docker push pooley68/multi-nginx
-  - docker push pooley68/multi-server
-  - docker push pooley/multi-worker
+  - docker push pooley1968/multi-client
+  - docker push pooley1968/multi-nginx
+  - docker push pooley1968/multi-server
+  - docker push pooley1968/multi-worker
