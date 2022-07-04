@@ -7,8 +7,8 @@ services:
 # before_install:
 #  - docker build -t pooley68/react-test -f ./client/Dockerfile.dev ./client
 
-script:
-  - docker run -e CI=true pooley68/react-test npm test
+# script:
+#  - docker run -e CI=true pooley68/react-test npm test
 
 after_success:
   - docker build -t pooley68/multi-client ./client
