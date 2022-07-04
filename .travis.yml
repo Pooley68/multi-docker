@@ -21,4 +21,4 @@ after_success:
   - docker push pooley68/multi-client
   - docker push pooley68/multi-nginx
   - docker push pooley68/multi-server
-  - docker push pooley68/multi-worker
+  - docker push pooley/multi-worker
